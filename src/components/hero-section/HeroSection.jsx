@@ -9,7 +9,7 @@ import './HeroSection.css'
 
 import { motion } from 'framer-motion'
 
-const HeroSection = ({ handleChange, Edit, Save }) => {
+const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
 
     const data = localStorage.getItem('data')
     const JSONFormate = JSON.parse(data)
@@ -21,7 +21,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
         <div className="hero" id="home">
             <div className="blur hero-blur"></div>
             <div className="left-h">
-                <Header handleChange={handleChange} Save={Save} Edit={Edit} />
+                <Header handleChange={handleChange} Save={Save} Edit={Edit} home_data={home_data} />
                 <div className="the-best-ad">
                     <motion.div
                         initial={{ left: mobile ? "165px" : "238px" }}
@@ -31,7 +31,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                     {/* <sp/an> */}
                     <textarea
                         className="active"
-                        defaultValue={JSONFormate?.nav_sub_title}
+                        defaultValue={JSONFormate?.nav_sub_title?JSONFormate?.nav_sub_title:home_data?.nav_sub_title}
                         onChange={handleChange}
                         name="nav_sub_title"
                         style={{
@@ -60,7 +60,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                             {/* Shape */}
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.shape}
+                                defaultValue={JSONFormate?.shape?JSONFormate?.shape:home_data?.shape}
                                 onChange={handleChange}
                                 name="shape"
                                 style={{
@@ -84,7 +84,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                         <span>
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.your}
+                                defaultValue={JSONFormate?.your?JSONFormate?.your:home_data?.your}
                                 onChange={handleChange}
                                 name="your"
                                 style={{
@@ -112,7 +112,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                         <span>
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.ideal_body}
+                                defaultValue={JSONFormate?.ideal_body?JSONFormate?.ideal_body:home_data?.ideal_body}
                                 onChange={handleChange}
                                 name="ideal_body"
                                 style={{
@@ -140,7 +140,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                         <span>
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.lading_des}
+                                defaultValue={JSONFormate?.lading_des?JSONFormate?.lading_des:home_data?.lading_des}
                                 onChange={handleChange}
                                 name="lading_des"
                                 style={{
@@ -176,7 +176,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                         <span>
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.expert_coachs}
+                                defaultValue={JSONFormate?.expert_coachs?JSONFormate?.expert_coachs:home_data?.expert_coachs}
                                 onChange={handleChange}
                                 name="expert_coachs"
                                 style={{
@@ -216,7 +216,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
                             {/* members */}
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.members}
+                                defaultValue={JSONFormate?.members?JSONFormate?.members:home_data?.members}
                                 onChange={handleChange}
                                 name="members"
                                 style={{
@@ -250,7 +250,7 @@ const HeroSection = ({ handleChange, Edit, Save }) => {
 
                             <textarea
                                 className="active"
-                                defaultValue={JSONFormate?.fitness_programs}
+                                defaultValue={JSONFormate?.fitness_programs?JSONFormate?.fitness_programs:home_data?.fitness_programs}
                                 onChange={handleChange}
                                 name="fitness_programs"
                                 style={{

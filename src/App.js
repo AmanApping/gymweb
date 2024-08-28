@@ -11,32 +11,14 @@ import Reasons from './components/reasons/Reasons';
 function App() {
   const [home_data, setHome_data] = useState(
     {
-      greetings: "Hello...",
-      name: "It's me John",
-      designation: "Web Developer",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      contact: "Let's chat",
-      about_title: "About me",
-      about_dec: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      Skill_title: "Skills",
-      skills: "Web development, Javascript",
-      project_title: "Projects",
-      location:"Ahmdabad, gujrat, 908909",
-      footer:"Lorem Ipsum is simply dummy text of the printing and typesetting",
-      Skill_title: "Skills",
-      about_dec: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      about_title: "About me",
-      choose_us: "including versions",
-      contact: "Let's chat",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      designation: "Web Developer",
+
       expert_coachs: "Ipsum",
       fitness_programs: "Ipsum",
       footer: "Lorem Ipsum is simply dummy text of the printing and typesetting",
       footer_text_gym_1: "YOUR BODY READY TO",
       greetings: "Hello...",
-      ideal_body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
-      lading_des: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      ideal_body: "versions of Lorem Ipsum",
+      lading_des: "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       level_up_1: "LEVEL UP",
       location: "Ahmdabad, gujrat, 908909",
       members: "Ipsum",
@@ -47,7 +29,7 @@ function App() {
       programs: "Programs",
       project_title: "Projects",
       ready_to_start: "including versions of Lorem Ipsum.",
-      shape: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      shape: "also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       skills: "Web development, Javascript",
       some_reason_1: "like Aldus",
       some_reason_2: "like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -87,7 +69,7 @@ function App() {
       cancelIconElements[i].style.display = 'none';
     }
     // window.location.reload(true)
-    
+
   }
 
   const handleChange = (e) => {
@@ -116,13 +98,13 @@ function App() {
 
   return (
     <div className="App">
-      <HeroSection handleChange={handleChange} Save={Save} Edit={Edit}/>
-      <Programs handleChange={handleChange} home_data={home_data}/>
-      <Reasons handleChange={handleChange} home_data={home_data}/>
-      <Plans handleChange={handleChange} home_data={home_data}/>
+      <HeroSection handleChange={handleChange} Save={Save} Edit={Edit} home_data={home_data}/>
+      <Programs handleChange={handleChange} home_data={home_data} />
+      <Reasons handleChange={handleChange} home_data={home_data} />
+      <Plans handleChange={handleChange} home_data={home_data} />
       {/* <Testimonials handleChange={handleChange} home_data={home_data}/> */}
-      <Join handleChange={handleChange} home_data={home_data}/>
-      <Footer handleChange={handleChange} home_data={home_data}/>
+      <Join handleChange={handleChange} home_data={home_data} />
+      <Footer handleChange={handleChange} home_data={home_data} />
     </div>
   );
 }

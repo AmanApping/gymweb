@@ -8,6 +8,7 @@ import dumble from '../../assets/sport.png'
 
 
 const Programs = ({ handleChange, home_data }) => {
+   
     const data = localStorage.getItem('data')
     const JSONFormate = JSON.parse(data)
     const [program, setProgram] = useState(() => {
