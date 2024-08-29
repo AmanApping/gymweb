@@ -99,7 +99,7 @@ const Join = ({ handleChange, home_data }) => {
                 {/* </div> */}
             </div>
             <div className="right-j">
-                <form
+                {/* <form
                     ref={form}
                     className="email-container"
                     onSubmit={sendEmail}
@@ -110,7 +110,7 @@ const Join = ({ handleChange, home_data }) => {
                         placeholder="Enter your email address"
                     />
                     <button className="btn btn-j">Join Now</button>
-                </form>
+                </form> */}
             </div>
         </div>
     )

@@ -46,8 +46,10 @@ function App() {
 
   const cancelIconElements = document.getElementsByClassName('cancle_icon');
   const activeElements = document.getElementsByClassName('active');
+  const savebutton  = document.getElementsByClassName("save_button_")
 
   const Edit = () => {
+    savebutton[0].style.display = "block"
 
     // Loop through active elements to apply the border style
     for (let i = 0; i < activeElements.length; i++) {
@@ -94,6 +96,7 @@ function App() {
     } else {
       localStorage.setItem('data', JSON.stringify(home_data));
     }
+    savebutton[0].style.display = "none"
   };
 
   return (

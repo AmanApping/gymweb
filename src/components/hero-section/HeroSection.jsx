@@ -279,7 +279,7 @@ const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
             </div>
 
             <div className="right-h">
-                <button className="btn">Join Now</button>
+                {/* <button className="btn">Join Now</button> */}
                 <motion.div
                     initial={{ right: "-1rem" }}
                     whileInView={{ right: "4rem" }}

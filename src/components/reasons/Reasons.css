@@ -44,16 +44,6 @@
     object-fit: cover; /* Ensures the image covers the entire container without distorting */
 }
 
-.cancle_icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(255, 255, 255, 0.5); /* Adds a background to make it visible on images */
-    padding: 5px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none; /* Hidden by default, to be shown on hover */
-}
 
 
 
