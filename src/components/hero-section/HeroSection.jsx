@@ -42,7 +42,7 @@ const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
                             color: "white",
                             // fontWeight:"800",
                             textTransform: "uppercase",
-                            padding: '10px',  // Optional: removes default padding
+                            // padding: '10px',  // Optional: removes default padding
                             marginLeft: '90px',   // Optional: removes default margin
                             resize: 'none', // Optional: disables resizing
                             minWidth: '460px',
@@ -71,7 +71,7 @@ const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
                                     // color: "white",
                                     // fontWeight:"800",
                                     textTransform: "uppercase",
-                                    padding: '10px',  // Optional: removes default padding
+                                    // padding: '10px',  // Optional: removes default padding
                                     // marginLeft: '90px',   // Optional: removes default margin
                                     resize: 'none', // Optional: disables resizing
                                     maxWidth: '260px',
@@ -95,7 +95,7 @@ const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
                                     // color: "white",
                                     // fontWeight:"800",
                                     textTransform: "uppercase",
-                                    padding: '10px',  // Optional: removes default padding
+                                    // padding: '10px',  // Optional: removes default padding
                                     // marginLeft: '90px',   // Optional: removes default margin
                                     resize: 'none', // Optional: disables resizing
                                     maxWidth: '260px',
@@ -123,7 +123,7 @@ const HeroSection = ({ handleChange, Edit, Save, home_data }) => {
                                     // color: "white",
                                     // fontWeight:"800",
                                     textTransform: "uppercase",
-                                    padding: '10px',  // Optional: removes default padding
+                                    // padding: '10px',  // Optional: removes default padding
                                     // marginLeft: '90px',   // Optional: removes default margin
                                     resize: 'none', // Optional: disables resizing
                                     maxWidth: 'auto',

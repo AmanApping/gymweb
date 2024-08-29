@@ -165,7 +165,7 @@ const Plans = ({ handleChange, home_data }) => {
                                     // color: "white",
                                     // fontWeight:"800",
                                     textTransform: "uppercase",
-                                    padding: '10px',  // Optional: removes default padding
+                                    // padding: '10px',  // Optional: removes default padding
                                     // marginLeft: '90px',   // Optional: removes default margin
                                     resize: 'none', // Optional: disables resizing
                                     maxWidth: '100%',

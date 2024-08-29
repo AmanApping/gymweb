@@ -83,7 +83,6 @@ const Reasons = ({ handleChange, home_data }) => {
             <div className="left-r">
                 {Object.keys(images).map(key => (
                     <>
-
                         <div key={key} className="Reasons__image-container">
                             <div className="cancle_icon hidden">
                                 <svg
@@ -115,7 +114,6 @@ const Reasons = ({ handleChange, home_data }) => {
 
             <div className="right-r">
                 <span>
-
                     <textarea
                         className="active "
                         defaultValue={JSONFormate?.some_reasons ? JSONFormate?.some_reasons : home_data?.some_reasons}
@@ -129,7 +127,7 @@ const Reasons = ({ handleChange, home_data }) => {
                             // color: "white",
                             // fontWeight:"800",
                             textTransform: "uppercase",
-                            padding: '10px',  // Optional: removes default padding
+                            // padding: '10px',  // Optional: removes default padding
                             // marginLeft: '90px',   // Optional: removes default margin
                             resize: 'none', // Optional: disables resizing
                             maxWidth: '100%',
@@ -153,7 +151,7 @@ const Reasons = ({ handleChange, home_data }) => {
                                 // color: "white",
                                 // fontWeight:"800",
                                 textTransform: "uppercase",
-                                padding: '10px',  // Optional: removes default padding
+                                // padding: '10px',  // Optional: removes default padding
                                 // marginLeft: '90px',   // Optional: removes default margin
                                 resize: 'none', // Optional: disables resizing
                                 maxWidth: '100%',
@@ -176,7 +174,7 @@ const Reasons = ({ handleChange, home_data }) => {
                                 // color: "white",
                                 // fontWeight:"800",
                                 textTransform: "uppercase",
-                                padding: '10px',  // Optional: removes default padding
+                                // padding: '10px',  // Optional: removes default padding
                                 // marginLeft: '90px',   // Optional: removes default margin
                                 resize: 'none', // Optional: disables resizing
                                 maxWidth: '100%',

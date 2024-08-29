@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Footer from './components/footer/Footer';
 import HeroSection from './components/hero-section/HeroSection';
 import Join from './components/join/Join';
@@ -17,7 +17,7 @@ function App() {
       footer: "Lorem Ipsum is simply dummy text of the printing and typesetting",
       footer_text_gym_1: "YOUR BODY READY TO",
       greetings: "Hello...",
-      ideal_body: "versions of Lorem Ipsum",
+      ideal_body: "Lorem Ipsum",
       lading_des: "remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       level_up_1: "LEVEL UP",
       location: "Ahmdabad, gujrat, 908909",
@@ -29,7 +29,8 @@ function App() {
       programs: "Programs",
       project_title: "Projects",
       ready_to_start: "including versions of Lorem Ipsum.",
-      shape: "also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      shape: "also",
+      your: "Lorem Ipsum",
       skills: "Web development, Javascript",
       some_reason_1: "like Aldus",
       some_reason_2: "like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -39,18 +40,19 @@ function App() {
       to_shape_you: "Ipsum",
       why: "Ipsum",
       withus: "WITH US?",
-      your: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
       your_journey: "Plans"
 
     })
 
   const cancelIconElements = document.getElementsByClassName('cancle_icon');
   const activeElements = document.getElementsByClassName('active');
-  const savebutton  = document.getElementsByClassName("save_button_")
+  const savebutton = document.getElementsByClassName("save_button_")
 
   const Edit = () => {
     savebutton[0].style.display = "block"
-
+    for (let i = 0; i < activeElements.length; i++) {
+      activeElements[i].disabled = false;
+    }
     // Loop through active elements to apply the border style
     for (let i = 0; i < activeElements.length; i++) {
       activeElements[i].style.border = '1px solid gray';
@@ -63,7 +65,6 @@ function App() {
 
 
   const Edit_Remove = () => {
-    const activeElements = document.getElementsByClassName('active');
     for (let i = 0; i < activeElements.length; i++) {
       activeElements[i].style.border = 'none';
     }
@@ -96,12 +97,20 @@ function App() {
     } else {
       localStorage.setItem('data', JSON.stringify(home_data));
     }
+   
+
     savebutton[0].style.display = "none"
+    // Disable fields
+    for (let i = 0; i < activeElements.length; i++) {
+      activeElements[i].disabled = true;
+    }
   };
+
+
 
   return (
     <div className="App">
-      <HeroSection handleChange={handleChange} Save={Save} Edit={Edit} home_data={home_data}/>
+      <HeroSection handleChange={handleChange} Save={Save} Edit={Edit} home_data={home_data} />
       <Programs handleChange={handleChange} home_data={home_data} />
       <Reasons handleChange={handleChange} home_data={home_data} />
       <Plans handleChange={handleChange} home_data={home_data} />
